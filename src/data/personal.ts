@@ -18,7 +18,7 @@ export const personal = {
   university: "Addis Ababa University",
   email: "hunegnawwondatir@gmail.com",
   // Your public site address once deployed, e.g. "https://your-site.vercel.app" (used for share previews)
-  siteUrl: "",
+  siteUrl: "https://wondie-portfolio.vercel.app",
   social: {
     github: "https://github.com/wondie3",
     linkedin: "https://www.linkedin.com/in/wondatir-hunegnaw-b4906b361",
