@@ -34,6 +34,7 @@ export const personal = {
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
+    { label: "Achievements", href: "#proof" },
     { label: "Contact", href: "#contact" },
   ],
 };
