@@ -589,3 +589,62 @@ html:has(dialog[open]) { overflow: hidden; }
 .project:hover .slider-arrow, .project:focus-within .slider-arrow { opacity: 1; }
 .project .badge { pointer-events: none; }
 .project-links a { position: relative; z-index: 3; }
+
+/* ===== Large screens: nav + hero line up with the sections ===== */
+.nav { padding-inline: max(clamp(20px, 5vw, 64px), calc((100% - 1280px) / 2)); }
+.hero { min-height: min(100svh, 900px); padding-inline: max(clamp(20px, 5vw, 64px), calc((100% - 1280px) / 2)); }
+.section-inner { max-width: 1280px; }
+
+/* Photo fades out softly at the bottom */
+.hp-cut { -webkit-mask-image: linear-gradient(#000 80%, transparent 100%); mask-image: linear-gradient(#000 80%, transparent 100%); }
+
+/* ===== Phones: compact layout ===== */
+@media (max-width: 600px) {
+  html { font-size: 90%; }
+  .nav { padding-block: 10px; }
+  .hero { min-height: 0; padding: 84px 18px 24px; gap: 20px; }
+  h1 { font-size: clamp(2.3rem, 12.5vw, 3.6rem); }
+  .role { font-size: 0.95rem; margin: 16px 0 10px; line-height: 1.55; }
+  .role span { display: inline-block; }
+  .role .sep { display: inline; padding: 0 0.3em; }
+  .intro { line-height: 1.6; margin-bottom: 20px; }
+  .btn { min-height: 46px; padding: 10px 18px; font-size: 0.95rem; }
+  .links { margin-top: 4px; }
+  .hp { width: min(100%, 230px); }
+  .hp-plate strong { font-size: 1.1rem; }
+
+  .section { padding: 40px 18px; }
+  .section-inner { transform: translateY(calc((1 - var(--sp)) * 28px)); }
+  .h2 { font-size: clamp(1.8rem, 9vw, 2.6rem); }
+  .prose { font-size: 1rem; line-height: 1.65; margin-top: 14px; }
+  .group, .ach-group { margin-top: 26px; }
+
+  /* Projects: swipe sideways, one card at a time */
+  .filter-tabs { margin-top: 18px; flex-wrap: nowrap; overflow-x: auto; margin-inline: -18px; padding: 2px 18px 6px; scrollbar-width: none; }
+  .filter-tabs::-webkit-scrollbar { display: none; }
+  .tab { flex: none; min-height: 40px; padding: 0 14px; font-size: 0.9rem; }
+  .project-grid, .filter-tabs + .project-grid { display: flex; gap: 14px; margin-top: 14px; margin-inline: -18px; padding: 4px 18px 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .project-grid::-webkit-scrollbar { display: none; }
+  .project-grid > .project-cell { flex: 0 0 84%; scroll-snap-align: center; }
+  .project-cell > div { opacity: 1 !important; transform: none !important; }
+  .project { padding: 8px; }
+  .project-body { padding: 14px 8px 8px; }
+  .project-body h3 { font-size: 1.25rem; }
+  .project-body p { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 10px; font-size: 0.92rem; }
+  .project .chips { max-height: 3.9rem; overflow: hidden; }
+  .project .chips li { padding: 4px 10px; font-size: 0.78rem; }
+
+  /* Certificates, skills, experience, contact: tighter */
+  .cert-thumb { aspect-ratio: 16 / 9; }
+  .cert-body { padding: 12px 14px 14px; }
+  .cert-prog { display: none; }
+  .cert-body .chips { max-height: 1.9rem; overflow: hidden; }
+  .skill-grid { gap: 12px; margin-top: 20px; }
+  .skill-card { padding: 18px; }
+  .tl-card { padding: 16px 16px; }
+  .jr { gap: 12px; }
+  .jr-card { padding: 12px 16px; }
+  .info-card { padding: 14px 16px; }
+  .ic { width: 42px; height: 42px; }
+  .form { padding: 18px; }
+}
