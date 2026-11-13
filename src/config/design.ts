@@ -18,5 +18,5 @@ export const motionConfig = {
 
 // Contact form. Leave endpoint empty to open the visitor's email app instead.
 export const contactForm = {
-  endpoint: "https://formspree.io/f/abcd1234",
+  endpoint: "https://formspree.io/f/xoedvyod",
 };
